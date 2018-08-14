@@ -1,7 +1,6 @@
 'use strict';
 
 // Import the interface to Tessel hardware
-const tessel = require('tessel');
 var av = require('tessel-av');
 var os = require('os');
 var http = require('http');
@@ -14,4 +13,4 @@ http
 
     camera.capture().pipe(response);
   })
-  .listen(port, () => console.log(`71.190.247.98.local:8000`));
+  .listen(port, () => console.log(`71.190.247.98.local:${port}`));
